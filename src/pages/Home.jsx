@@ -65,11 +65,15 @@ const Home = () => {
             Agende agora uma consultoria gratuita de 30 minutos e descubra como podemos impulsionar sua instituição de saúde para o futuro digital.
           </p>
           <div className="text-center">
-            <Link to="/contato">
+            <a
+              href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0Nh9Aw-Ck_Ow5Ld4Aw1Ht9Ck_Ow5Ld4Aw1Ht=?gv=true"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold py-3 px-6 rounded-full text-lg transition-all duration-200 transform hover:scale-105">
                 Agende sua Consultoria Gratuita
               </Button>
-            </Link>
+            </a>
           </div>
         </div>
       </div>
