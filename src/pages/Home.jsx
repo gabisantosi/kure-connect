@@ -15,7 +15,7 @@ const Home = () => {
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
           <div className="text-center text-white">
             <h1 className="text-5xl font-bold mb-6 leading-tight">
-              Consultoria Especializada em <span className="text-primary">Saúde</span>
+              Consultoria Especializada em Saúde
             </h1>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
               Oferecemos soluções de consultoria personalizadas em saúde digital, tecnologia e inovação para otimizar processos e melhorar a qualidade dos serviços.
