@@ -12,10 +12,10 @@ const Header = () => {
           <nav>
             <ul className="flex space-x-6">
               <li><Link to="/" className="hover:text-muted transition-colors duration-200">Início</Link></li>
-              <li><Link to="/servicos" className="hover:text-muted transition-colors duration-200">Saúde Digital</Link></li>
-              <li><Link to="/tecnologia" className="hover:text-muted transition-colors duration-200">Tecnologia</Link></li>
-              <li><Link to="/programas" className="hover:text-muted transition-colors duration-200">Programas</Link></li>
-              <li><Link to="/metodologias" className="hover:text-muted transition-colors duration-200">Metodologias Ágeis</Link></li>
+              <li><Link to="/saude-digital" className="hover:text-muted transition-colors duration-200">Saúde Digital</Link></li>
+              <li><Link to="/gestao-de-projetos" className="hover:text-muted transition-colors duration-200">Gestão de Projetos</Link></li>
+              <li><Link to="/cursos" className="hover:text-muted transition-colors duration-200">Cursos</Link></li>
+              <li><Link to="/materiais-educativos" className="hover:text-muted transition-colors duration-200">Materiais Educativos</Link></li>
             </ul>
           </nav>
         </div>

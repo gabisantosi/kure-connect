@@ -4,9 +4,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
-import Services from "./pages/Services";
-import Partnerships from "./pages/Partnerships";
-import Contact from "./pages/Contact";
+import SaudeDigital from "./pages/SaudeDigital";
+import GestaoProjetos from "./pages/GestaoProjetos";
+import Cursos from "./pages/Cursos";
+import MateriaisEducativos from "./pages/MateriaisEducativos";
 
 const App = () => (
   <TooltipProvider>
@@ -17,9 +18,10 @@ const App = () => (
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/servicos" element={<Services />} />
-            <Route path="/parcerias" element={<Partnerships />} />
-            <Route path="/contato" element={<Contact />} />
+            <Route path="/saude-digital" element={<SaudeDigital />} />
+            <Route path="/gestao-de-projetos" element={<GestaoProjetos />} />
+            <Route path="/cursos" element={<Cursos />} />
+            <Route path="/materiais-educativos" element={<MateriaisEducativos />} />
           </Routes>
         </main>
         <Footer />
