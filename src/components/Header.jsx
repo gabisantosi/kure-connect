@@ -21,8 +21,8 @@ const Header = () => {
     { to: "/cursos", label: t.cursos },
     { to: "/materiais-educativos", label: t.materiaisEducativos },
     { to: "/sobre-nos", label: t.quemSomos },
-    { to: "/contato", label: t.contato },
     { to: "/blog", label: t.blog },
+    { to: "/contato", label: t.contato },
   ];
 
   const getCountryCode = (lang) => {
