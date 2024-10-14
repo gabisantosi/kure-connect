@@ -28,6 +28,7 @@ export const translations = {
     heroTitle: 'Consultoria Especializada em Saúde',
     heroDescription: 'Oferecemos soluções de consultoria personalizadas em saúde digital, tecnologia e inovação para otimizar processos e melhorar a qualidade dos serviços.',
     scheduleConsultation: 'Agende uma Consultoria',
+    blog: 'Blog',
   },
   en: {
     home: 'Home',
@@ -58,5 +59,6 @@ export const translations = {
     heroTitle: 'Specialized Health Consulting',
     heroDescription: 'We offer personalized consulting solutions in digital health, technology, and innovation to optimize processes and improve service quality.',
     scheduleConsultation: 'Schedule a Consultation',
+    blog: 'Blog',
   },
 };

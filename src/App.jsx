@@ -1,3 +1,4 @@
+import React from 'react';
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -11,6 +12,7 @@ import Cursos from "./pages/Cursos";
 import MateriaisEducativos from "./pages/MateriaisEducativos";
 import QuemSomos from "./pages/QuemSomos";
 import Contato from "./pages/Contato";
+import BlogPosts from "./components/BlogPosts";
 
 const App = () => (
   <LanguageProvider>
@@ -28,6 +30,7 @@ const App = () => (
               <Route path="/materiais-educativos" element={<MateriaisEducativos />} />
               <Route path="/sobre-nos" element={<QuemSomos />} />
               <Route path="/contato" element={<Contato />} />
+              <Route path="/blog" element={<BlogPosts />} />
             </Routes>
           </main>
           <Footer />

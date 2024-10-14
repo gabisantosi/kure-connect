@@ -22,6 +22,7 @@ const Header = () => {
     { to: "/materiais-educativos", label: t.materiaisEducativos },
     { to: "/sobre-nos", label: t.quemSomos },
     { to: "/contato", label: t.contato },
+    { to: "/blog", label: t.blog },
   ];
 
   return (
