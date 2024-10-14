@@ -46,6 +46,33 @@ const Home = () => {
           ))}
         </div>
       </div>
+
+      {/* Agende uma Consultoria Section */}
+      <div className="bg-primary/10 py-20">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-semibold mb-6 text-center text-primary">Agende uma Consultoria Personalizada</h2>
+          <p className="text-xl mb-8 text-center max-w-3xl mx-auto">
+            Transforme sua organização de saúde com nossa expertise em saúde digital e gestão de projetos. 
+            Nossa equipe de consultores especializados está pronta para ajudar você a:
+          </p>
+          <ul className="list-disc list-inside mb-8 text-lg max-w-2xl mx-auto">
+            <li>Otimizar processos clínicos e administrativos</li>
+            <li>Implementar soluções tecnológicas inovadoras</li>
+            <li>Melhorar a experiência do paciente e a qualidade do atendimento</li>
+            <li>Reduzir custos operacionais e aumentar a eficiência</li>
+          </ul>
+          <p className="text-center mb-8">
+            Agende agora uma consultoria gratuita de 30 minutos e descubra como podemos impulsionar sua instituição de saúde para o futuro digital.
+          </p>
+          <div className="text-center">
+            <Link to="/contato">
+              <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold py-3 px-6 rounded-full text-lg transition-all duration-200 transform hover:scale-105">
+                Agende sua Consultoria Gratuita
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
