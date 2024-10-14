@@ -3,10 +3,12 @@ import { Button } from "@/components/ui/button";
 import { CalendarDays, Clock, Users } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../translations';
+import useEmblaCarousel from 'embla-carousel-react';
 
 const Home = () => {
   const { language } = useLanguage();
   const t = translations[language];
+  const [emblaRef] = useEmblaCarousel({ loop: true, align: 'start' });
 
   const clients = [
     { name: "Organização Pan-Americana de Saúde", logo: "https://i.ibb.co/4jyDC9S/opas.jpg" },
@@ -67,13 +69,14 @@ const Home = () => {
       <div className="bg-gray-100 py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-semibold mb-8 text-center text-secondary">Nossos Clientes</h2>
-          <div className="flex flex-wrap justify-center gap-8">
-            {clients.map((client, index) => (
-              <div key={index} className="flex flex-col items-center">
-                <img src={client.logo} alt={client.name} className="w-32 h-32 object-contain mb-4" />
-                <p className="text-center font-medium">{client.name}</p>
-              </div>
-            ))}
+          <div className="overflow-hidden" ref={emblaRef}>
+            <div className="flex">
+              {clients.map((client, index) => (
+                <div key={index} className="flex-[0_0_20%] min-w-0 px-4">
+                  <img src={client.logo} alt={client.name} className="w-full h-32 object-contain" />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
