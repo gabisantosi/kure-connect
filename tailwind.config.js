@@ -24,28 +24,24 @@ module.exports = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#478EA7",
-          light: "#5FAAC4",
-          dark: "#3A7289",
-          foreground: "#FFFFFF",
+          DEFAULT: "#478EA7", // Cor do logo da Kure Saúde
+          foreground: "#FFFFFF", // Mantendo o branco para contraste
         },
         secondary: {
-          DEFAULT: "#1E2A3B",
-          light: "#2C3E56",
-          dark: "#131C28",
-          foreground: "#FFFFFF",
-        },
-        accent: {
-          DEFAULT: "#E3F2F9",
-          foreground: "#1E2A3B",
+          DEFAULT: "#1E2A3B", // Mantendo o azul escuro como cor secundária
+          foreground: "#FFFFFF", // Branco
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
         },
         muted: {
-          DEFAULT: "#F8FAFC",
-          foreground: "#1E2A3B",
+          DEFAULT: "#F8FAFC", // Cinza claro
+          foreground: "#1E2A3B", // Azul escuro
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
@@ -60,8 +56,6 @@ module.exports = {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
-        xl: "1rem",
-        "2xl": "1.5rem",
       },
       keyframes: {
         "accordion-down": {
