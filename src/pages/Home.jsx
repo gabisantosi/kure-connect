@@ -13,7 +13,7 @@ const Home = () => {
           className="w-full h-full object-cover object-[center_30%]"
         />
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <div className="text-center text-white">
+          <div className="text-center text-white mt-16"> {/* Added mt-16 to move text down */}
             <h1 className="text-5xl font-bold mb-6 leading-tight">
               Consultoria Especializada em Saúde
             </h1>
