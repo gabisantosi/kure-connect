@@ -1,24 +1,25 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Globe } from "lucide-react";
+import { useLanguage } from "../contexts/LanguageContext";
+import { translations } from "../translations";
 
-const Header = ({ setIsMenuOpen }) => {
-  const [isMenuOpen, setIsMenuOpenInternal] = useState(false);
+const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { language, toggleLanguage } = useLanguage();
 
   const toggleMenu = () => {
-    const newMenuState = !isMenuOpen;
-    setIsMenuOpenInternal(newMenuState);
-    setIsMenuOpen(newMenuState);
+    setIsMenuOpen(!isMenuOpen);
   };
 
   const menuItems = [
-    { to: "/", label: "Início" },
-    { to: "/saude-digital", label: "Saúde Digital" },
-    { to: "/gestao-de-projetos", label: "Gestão de Projetos" },
-    { to: "/cursos", label: "Cursos" },
-    { to: "/materiais-educativos", label: "Materiais Educativos" },
-    { to: "/sobre-nos", label: "Quem Somos" },
-    { to: "/contato", label: "Contato" },
+    { to: "/", label: translations[language].home },
+    { to: "/saude-digital", label: translations[language].saudeDigital },
+    { to: "/gestao-de-projetos", label: translations[language].gestaoProjetos },
+    { to: "/cursos", label: translations[language].cursos },
+    { to: "/materiais-educativos", label: translations[language].materiaisEducativos },
+    { to: "/sobre-nos", label: translations[language].quemSomos },
+    { to: "/contato", label: translations[language].contato },
   ];
 
   return (
@@ -41,7 +42,7 @@ const Header = ({ setIsMenuOpen }) => {
                   <Link
                     to={item.to}
                     className="block px-4 md:px-0 text-gray-600 hover:text-primary transition-colors duration-200 font-medium relative group"
-                    onClick={() => toggleMenu()}
+                    onClick={() => setIsMenuOpen(false)}
                   >
                     {item.label}
                     <span className="absolute left-0 bottom-0 w-full h-0.5 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-200"></span>
@@ -50,6 +51,9 @@ const Header = ({ setIsMenuOpen }) => {
               ))}
             </ul>
           </nav>
+          <button onClick={toggleLanguage} className="ml-4 text-gray-600 hover:text-primary">
+            <Globe size={24} />
+          </button>
         </div>
       </div>
     </header>

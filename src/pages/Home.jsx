@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { CalendarDays, Clock, Users } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
+import { translations } from '../translations';
 import Header from '../components/Header';
 
 const Home = () => {
+  const { language } = useLanguage();
+  const t = translations[language];
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -19,17 +23,19 @@ const Home = () => {
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
           <div className="text-center text-white mt-32">
             <h1 className="text-5xl font-bold mb-6 leading-tight">
-              Consultoria Especializada em Saúde
+              {language === 'pt' ? 'Consultoria Especializada em Saúde' : 'Specialized Health Consulting'}
             </h1>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Oferecemos soluções de consultoria personalizadas em saúde digital, tecnologia e inovação para otimizar processos e melhorar a qualidade dos serviços.
+              {language === 'pt' 
+                ? 'Oferecemos soluções de consultoria personalizadas em saúde digital, tecnologia e inovação para otimizar processos e melhorar a qualidade dos serviços.'
+                : 'We offer personalized consulting solutions in digital health, technology, and innovation to optimize processes and improve service quality.'}
             </p>
             <a
               href="#agende-consultoria"
               rel="noopener noreferrer"
             >
               <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold py-3 px-6 rounded-full text-lg transition-all duration-200 transform hover:scale-105">
-                Agende uma Consultoria
+                {language === 'pt' ? 'Agende uma Consultoria' : 'Schedule a Consultation'}
               </Button>
             </a>
           </div>
@@ -38,13 +44,13 @@ const Home = () => {
 
       {/* Services Section */}
       <div className={`container mx-auto px-4 py-20 ${isMenuOpen ? 'mt-64 md:mt-0' : ''}`}>
-        <h2 className="text-4xl font-semibold mb-10 text-secondary text-center">Nossos Serviços de Consultoria</h2>
+        <h2 className="text-4xl font-semibold mb-10 text-secondary text-center">{t.servicesTitle}</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {[
-            { title: "Saúde Digital", description: "Implementação de soluções digitais para melhorar a eficiência e qualidade dos serviços de saúde." },
-            { title: "Tecnologia em Saúde", description: "Consultoria em adoção e integração de tecnologias inovadoras no setor de saúde." },
-            { title: "Programas de Saúde", description: "Desenvolvimento de programas personalizados para atender às necessidades específicas de instituições de saúde." },
-            { title: "Metodologias Ágeis", description: "Aplicação de princípios ágeis para melhorar a gestão e entrega de projetos no setor de saúde." }
+            { title: t.digitalHealth, description: t.digitalHealthDescription },
+            { title: t.healthTechnology, description: t.healthTechnologyDescription },
+            { title: t.healthPrograms, description: t.healthProgramsDescription },
+            { title: t.agileMethodologies, description: t.agileMethodologiesDescription }
           ].map((service, index) => (
             <div key={index} className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
               <h3 className="text-xl font-semibold mb-3 text-primary">{service.title}</h3>
@@ -57,28 +63,27 @@ const Home = () => {
       {/* Agende uma Consultoria Section */}
       <div id="agende-consultoria" className="bg-gradient-to-r from-primary/10 to-primary/30 py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-semibold mb-6 text-center text-primary">Agende uma Consultoria Personalizada</h2>
+          <h2 className="text-4xl font-semibold mb-6 text-center text-primary">{t.scheduleConsultationTitle}</h2>
           <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-xl p-8 mt-10">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
               <div className="flex flex-col items-center text-center">
                 <CalendarDays className="w-12 h-12 text-primary mb-4" />
-                <h3 className="text-xl font-semibold mb-2">Flexibilidade</h3>
-                <p>Escolha o melhor dia e horário para sua consultoria</p>
+                <h3 className="text-xl font-semibold mb-2">{t.flexibility}</h3>
+                <p>{t.chooseDate}</p>
               </div>
               <div className="flex flex-col items-center text-center">
                 <Clock className="w-12 h-12 text-primary mb-4" />
-                <h3 className="text-xl font-semibold mb-2">30 Minutos</h3>
-                <p>Sessão focada para abordar suas principais necessidades</p>
+                <h3 className="text-xl font-semibold mb-2">{t.thirtyMinutes}</h3>
+                <p>{t.focusedSession}</p>
               </div>
               <div className="flex flex-col items-center text-center">
                 <Users className="w-12 h-12 text-primary mb-4" />
-                <h3 className="text-xl font-semibold mb-2">Especialistas</h3>
-                <p>Converse com nossos consultores experientes em saúde digital</p>
+                <h3 className="text-xl font-semibold mb-2">{t.experts}</h3>
+                <p>{t.talkToConsultants}</p>
               </div>
             </div>
             <p className="text-center text-lg mb-8">
-              Transforme sua organização de saúde com nossa expertise em saúde digital e gestão de projetos. 
-              Agende agora uma consultoria gratuita de 30 minutos e descubra como podemos impulsionar sua instituição para o futuro digital.
+              {t.transformYourOrganization}
             </p>
             <div className="text-center">
               <a
@@ -87,7 +92,7 @@ const Home = () => {
                 rel="noopener noreferrer"
               >
                 <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold py-4 px-8 rounded-full text-lg transition-all duration-200 transform hover:scale-105">
-                  Agende sua Consultoria Gratuita
+                  {t.scheduleFreeConsultation}
                 </Button>
               </a>
             </div>
