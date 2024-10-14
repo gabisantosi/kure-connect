@@ -12,6 +12,7 @@ const Home = () => {
     { name: "Organização Pan-Americana de Saúde", logo: "https://i.ibb.co/4jyDC9S/opas.jpg" },
     { name: "Encare", logo: "https://i.ibb.co/vqQ706w/logo-encare.png" },
     { name: "Laços Saúde", logo: "https://i.ibb.co/GMLgLpn/lacos-saude.png" },
+    { name: "Elfie Digital Health", logo: "https://i.ibb.co/PrKbnDZ/elfie.png" },
   ];
 
   return (
