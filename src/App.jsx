@@ -11,6 +11,7 @@ import Cursos from "./pages/Cursos";
 import MateriaisEducativos from "./pages/MateriaisEducativos";
 import QuemSomos from "./pages/QuemSomos";
 import Contato from "./pages/Contato";
+import Blog from "./pages/Blog";
 
 const App = () => (
   <LanguageProvider>
@@ -28,6 +29,7 @@ const App = () => (
               <Route path="/materiais-educativos" element={<MateriaisEducativos />} />
               <Route path="/sobre-nos" element={<QuemSomos />} />
               <Route path="/contato" element={<Contato />} />
+              <Route path="/blog" element={<Blog />} />
             </Routes>
           </main>
           <Footer />
