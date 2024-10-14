@@ -1,19 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { CalendarDays, Clock, Users } from 'lucide-react';
+import Header from '../components/Header';
 
 const Home = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <div>
+      <Header setIsMenuOpen={setIsMenuOpen} />
       {/* Hero Section */}
-      <div className="relative h-[70vh] overflow-hidden">
+      <div className="relative h-[70vh] overflow-hidden pt-16">
         <img 
           src="https://i.ibb.co/yX3yvb5/photo-02.jpg" 
           alt="Kure Saúde Hero" 
           className="w-full h-full object-cover object-[center_30%]"
         />
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <div className="text-center text-white mt-32"> {/* Aumentamos a margem superior de mt-16 para mt-32 */}
+          <div className="text-center text-white mt-32">
             <h1 className="text-5xl font-bold mb-6 leading-tight">
               Consultoria Especializada em Saúde
             </h1>
@@ -33,7 +37,7 @@ const Home = () => {
       </div>
 
       {/* Services Section */}
-      <div className="container mx-auto px-4 py-20">
+      <div className={`container mx-auto px-4 py-20 ${isMenuOpen ? 'mt-64 md:mt-0' : ''}`}>
         <h2 className="text-4xl font-semibold mb-10 text-secondary text-center">Nossos Serviços de Consultoria</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {[

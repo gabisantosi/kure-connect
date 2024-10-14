@@ -2,11 +2,13 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
-const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+const Header = ({ setIsMenuOpen }) => {
+  const [isMenuOpen, setIsMenuOpenInternal] = useState(false);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    const newMenuState = !isMenuOpen;
+    setIsMenuOpenInternal(newMenuState);
+    setIsMenuOpen(newMenuState);
   };
 
   const menuItems = [
@@ -20,7 +22,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="bg-white shadow-md">
+    <header className="bg-white shadow-md fixed w-full z-50">
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center">
@@ -39,7 +41,7 @@ const Header = () => {
                   <Link
                     to={item.to}
                     className="block px-4 md:px-0 text-gray-600 hover:text-primary transition-colors duration-200 font-medium relative group"
-                    onClick={() => setIsMenuOpen(false)}
+                    onClick={() => toggleMenu()}
                   >
                     {item.label}
                     <span className="absolute left-0 bottom-0 w-full h-0.5 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-200"></span>
