@@ -1,18 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Button } from "@/components/ui/button";
 import { CalendarDays, Clock, Users } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../translations';
-import Header from '../components/Header';
 
 const Home = () => {
   const { language } = useLanguage();
   const t = translations[language];
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <div>
-      <Header setIsMenuOpen={setIsMenuOpen} />
       {/* Hero Section */}
       <div className="relative h-[70vh] overflow-hidden pt-16">
         <img 
@@ -23,19 +20,17 @@ const Home = () => {
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
           <div className="text-center text-white mt-32">
             <h1 className="text-5xl font-bold mb-6 leading-tight">
-              {language === 'pt' ? 'Consultoria Especializada em Saúde' : 'Specialized Health Consulting'}
+              {t.heroTitle}
             </h1>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
-              {language === 'pt' 
-                ? 'Oferecemos soluções de consultoria personalizadas em saúde digital, tecnologia e inovação para otimizar processos e melhorar a qualidade dos serviços.'
-                : 'We offer personalized consulting solutions in digital health, technology, and innovation to optimize processes and improve service quality.'}
+              {t.heroDescription}
             </p>
             <a
               href="#agende-consultoria"
               rel="noopener noreferrer"
             >
               <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold py-3 px-6 rounded-full text-lg transition-all duration-200 transform hover:scale-105">
-                {language === 'pt' ? 'Agende uma Consultoria' : 'Schedule a Consultation'}
+                {t.scheduleConsultation}
               </Button>
             </a>
           </div>
@@ -43,7 +38,7 @@ const Home = () => {
       </div>
 
       {/* Services Section */}
-      <div className={`container mx-auto px-4 py-20 ${isMenuOpen ? 'mt-64 md:mt-0' : ''}`}>
+      <div className="container mx-auto px-4 py-20">
         <h2 className="text-4xl font-semibold mb-10 text-secondary text-center">{t.servicesTitle}</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {[

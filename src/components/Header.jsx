@@ -7,19 +7,20 @@ import { translations } from "../translations";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { language, toggleLanguage } = useLanguage();
+  const t = translations[language];
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   const menuItems = [
-    { to: "/", label: translations[language].home },
-    { to: "/saude-digital", label: translations[language].saudeDigital },
-    { to: "/gestao-de-projetos", label: translations[language].gestaoProjetos },
-    { to: "/cursos", label: translations[language].cursos },
-    { to: "/materiais-educativos", label: translations[language].materiaisEducativos },
-    { to: "/sobre-nos", label: translations[language].quemSomos },
-    { to: "/contato", label: translations[language].contato },
+    { to: "/", label: t.home },
+    { to: "/saude-digital", label: t.saudeDigital },
+    { to: "/gestao-de-projetos", label: t.gestaoProjetos },
+    { to: "/cursos", label: t.cursos },
+    { to: "/materiais-educativos", label: t.materiaisEducativos },
+    { to: "/sobre-nos", label: t.quemSomos },
+    { to: "/contato", label: t.contato },
   ];
 
   return (
