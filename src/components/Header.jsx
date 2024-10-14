@@ -5,7 +5,10 @@ const Header = () => {
     <header className="bg-primary text-primary-foreground shadow-md">
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
-          <Link to="/" className="text-2xl font-bold tracking-tight">Kure Saúde</Link>
+          <Link to="/" className="flex items-center">
+            <img src="https://i.ibb.co/TH1yvv8/kure-logo.png" alt="Kure Saúde Logo" className="h-10 mr-2" />
+            <span className="text-2xl font-bold tracking-tight">Kure Saúde</span>
+          </Link>
           <nav>
             <ul className="flex space-x-6">
               <li><Link to="/" className="hover:text-muted transition-colors duration-200">Início</Link></li>
