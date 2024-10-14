@@ -7,17 +7,38 @@ const fetchBlogPosts = async () => {
   return [
     {
       id: 1,
-      title: "Inovações em Saúde Digital",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-      date: "2023-05-15",
-      linkedinUrl: "https://www.linkedin.com/post/example1"
+      title: "A Importância da Saúde Digital no Cuidado a Pacientes",
+      content: "A saúde digital tem revolucionado a forma como os cuidados de saúde são prestados, melhorando significativamente a qualidade do atendimento ao paciente. Através de tecnologias como prontuários eletrônicos, telemedicina e dispositivos de monitoramento remoto, os profissionais de saúde podem oferecer um cuidado mais personalizado e eficiente. Isso não apenas aumenta a satisfação do paciente, mas também melhora os resultados clínicos e reduz os custos de saúde a longo prazo.",
+      date: "2024-03-15",
+      linkedinUrl: "https://www.linkedin.com/post/saude-digital-cuidado-pacientes"
     },
     {
       id: 2,
+      title: "Health Startups nos Países Nórdicos: Um Modelo de Inovação",
+      content: "Os países nórdicos têm se destacado como um hub de inovação para health startups. Com um forte foco em tecnologia, design centrado no usuário e sistemas de saúde públicos robustos, essas startups estão desenvolvendo soluções que abordam desafios globais de saúde. Desde plataformas de telemedicina até aplicativos de saúde mental, as startups nórdicas estão definindo novos padrões para o cuidado de saúde digital.",
+      date: "2024-03-20",
+      linkedinUrl: "https://www.linkedin.com/post/health-startups-paises-nordicos"
+    },
+    {
+      id: 3,
+      title: "Gestão de Projetos em Saúde Pública: Desafios e Oportunidades",
+      content: "A gestão eficaz de projetos é crucial para o sucesso de iniciativas de saúde pública. Com recursos limitados e demandas crescentes, os gestores de saúde pública enfrentam desafios únicos. A aplicação de metodologias ágeis e ferramentas de gestão de projetos pode melhorar significativamente a eficiência e o impacto dessas iniciativas, desde campanhas de vacinação até programas de prevenção de doenças crônicas.",
+      date: "2024-03-25",
+      linkedinUrl: "https://www.linkedin.com/post/gestao-projetos-saude-publica"
+    },
+    {
+      id: 4,
+      title: "Inovações em Saúde Digital",
+      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+      date: "2024-03-10",
+      linkedinUrl: "https://www.linkedin.com/post/inovacoes-saude-digital"
+    },
+    {
+      id: 5,
       title: "O Futuro da Telemedicina",
       content: "Praesent in mauris eu tortor porttitor accumsan...",
-      date: "2023-05-20",
-      linkedinUrl: "https://www.linkedin.com/post/example2"
+      date: "2024-03-05",
+      linkedinUrl: "https://www.linkedin.com/post/futuro-telemedicina"
     }
   ];
 };
