@@ -8,6 +8,8 @@ import SaudeDigital from "./pages/SaudeDigital";
 import GestaoProjetos from "./pages/GestaoProjetos";
 import Cursos from "./pages/Cursos";
 import MateriaisEducativos from "./pages/MateriaisEducativos";
+import QuemSomos from "./pages/QuemSomos";
+import Contato from "./pages/Contato";
 
 const App = () => (
   <TooltipProvider>
@@ -22,6 +24,8 @@ const App = () => (
             <Route path="/gestao-de-projetos" element={<GestaoProjetos />} />
             <Route path="/cursos" element={<Cursos />} />
             <Route path="/materiais-educativos" element={<MateriaisEducativos />} />
+            <Route path="/sobre-nos" element={<QuemSomos />} />
+            <Route path="/contato" element={<Contato />} />
           </Routes>
         </main>
         <Footer />

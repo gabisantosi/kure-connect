@@ -17,6 +17,8 @@ const Header = () => {
                 { to: "/gestao-de-projetos", label: "Gestão de Projetos" },
                 { to: "/cursos", label: "Cursos" },
                 { to: "/materiais-educativos", label: "Materiais Educativos" },
+                { to: "/sobre-nos", label: "Quem Somos" },
+                { to: "/contato", label: "Contato" },
               ].map((item) => (
                 <li key={item.to}>
                   <Link
