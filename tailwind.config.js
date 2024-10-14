@@ -24,11 +24,11 @@ module.exports = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#008B8B", // Azul-petróleo
-          foreground: "#FFFFFF", // Branco
+          DEFAULT: "#478EA7", // Cor do logo da Kure Saúde
+          foreground: "#FFFFFF", // Mantendo o branco para contraste
         },
         secondary: {
-          DEFAULT: "#1E2A3B", // Azul escuro
+          DEFAULT: "#1E2A3B", // Mantendo o azul escuro como cor secundária
           foreground: "#FFFFFF", // Branco
         },
         destructive: {
