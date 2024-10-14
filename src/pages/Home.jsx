@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="bg-muted rounded-lg p-8 shadow-lg">
-        <h1 className="text-5xl font-bold mb-6 text-secondary leading-tight">Consultoria Especializada em <span className="text-primary">Saúde Digital</span></h1>
+        <h1 className="text-5xl font-bold mb-6 text-secondary leading-tight">Consultoria Especializada em <span className="text-primary">Saúde</span></h1>
         <p className="text-xl mb-8 text-secondary leading-relaxed">
           Oferecemos soluções de consultoria personalizadas em saúde digital, tecnologia e inovação para otimizar processos, melhorar a qualidade dos serviços e impulsionar a transformação digital no setor de saúde.
         </p>
