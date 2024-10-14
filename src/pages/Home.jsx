@@ -50,12 +50,11 @@ const Home = () => {
       {/* Services Section */}
       <div className="container mx-auto px-4 py-20">
         <h2 className="text-4xl font-semibold mb-10 text-secondary text-center">{t.servicesTitle}</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
-            { title: t.digitalHealth, description: t.digitalHealthDescription },
-            { title: t.healthTechnology, description: t.healthTechnologyDescription },
-            { title: t.healthPrograms, description: t.healthProgramsDescription },
-            { title: t.agileMethodologies, description: t.agileMethodologiesDescription }
+            { title: t.saudeDigital, description: t.digitalHealthDescription },
+            { title: t.gestaoProjetos, description: t.projectManagementDescription },
+            { title: t.cursos, description: t.coursesDescription }
           ].map((service, index) => (
             <div key={index} className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
               <h3 className="text-xl font-semibold mb-3 text-primary">{service.title}</h3>

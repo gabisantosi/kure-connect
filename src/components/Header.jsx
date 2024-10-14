@@ -16,10 +16,6 @@ const Header = () => {
 
   const menuItems = [
     { to: "/", label: t.home },
-    { to: "/saude-digital", label: t.saudeDigital },
-    { to: "/gestao-de-projetos", label: t.gestaoProjetos },
-    { to: "/cursos", label: t.cursos },
-    { to: "/materiais-educativos", label: t.materiaisEducativos },
     { to: "/sobre-nos", label: t.quemSomos },
     { to: "/blog", label: t.blog },
     { to: "/contato", label: t.contato },
