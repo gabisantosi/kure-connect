@@ -30,6 +30,7 @@ const Home = () => {
       </div>
 
       {/* Services Section */}
+      {/* Services Section */}
       <div className="container mx-auto px-4 py-20">
         <h2 className="text-4xl font-semibold mb-10 text-secondary text-center">Nossos Serviços de Consultoria</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -44,23 +45,6 @@ const Home = () => {
               <p className="text-secondary">{service.description}</p>
             </div>
           ))}
-        </div>
-      </div>
-
-      {/* Calendar Section */}
-      <div className="container mx-auto px-4 py-20">
-        <h2 className="text-4xl font-semibold mb-10 text-secondary text-center">Agenda de Consultorias</h2>
-        <div className="flex justify-center">
-          <iframe 
-            src="https://calendar.google.com/calendar/embed?src=gabrielasilva%40kuresaude.com&ctz=Europe%2FStockholm" 
-            style={{border: 0}} 
-            width="800" 
-            height="600" 
-            frameBorder="0" 
-            scrolling="no"
-            title="Agenda de Consultorias"
-            className="max-w-full"
-          ></iframe>
         </div>
       </div>
 
