@@ -1,6 +1,5 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
@@ -20,11 +19,15 @@ const Home = () => {
             <p className="text-xl mb-8 max-w-2xl mx-auto">
               Oferecemos soluções de consultoria personalizadas em saúde digital, tecnologia e inovação para otimizar processos e melhorar a qualidade dos serviços.
             </p>
-            <Link to="/contato">
+            <a
+              href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0Nh9Aw-Ck_Ow5Ld4Aw1Ht9Ck_Ow5Ld4Aw1Ht=?gv=true"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold py-3 px-6 rounded-full text-lg transition-all duration-200 transform hover:scale-105">
                 Agende uma Consultoria
               </Button>
-            </Link>
+            </a>
           </div>
         </div>
       </div>
