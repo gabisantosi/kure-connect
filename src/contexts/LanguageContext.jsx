@@ -6,7 +6,14 @@ export const LanguageProvider = ({ children }) => {
   const [language, setLanguage] = useState('pt');
 
   const toggleLanguage = () => {
-    setLanguage(prevLang => prevLang === 'pt' ? 'en' : 'pt');
+    setLanguage(prevLang => {
+      switch(prevLang) {
+        case 'pt': return 'en';
+        case 'en': return 'sv';
+        case 'sv': return 'pt';
+        default: return 'pt';
+      }
+    });
   };
 
   return (

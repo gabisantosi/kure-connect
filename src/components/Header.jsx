@@ -25,6 +25,15 @@ const Header = () => {
     { to: "/blog", label: t.blog },
   ];
 
+  const getCountryCode = (lang) => {
+    switch(lang) {
+      case 'pt': return 'BR';
+      case 'en': return 'US';
+      case 'sv': return 'SE';
+      default: return 'BR';
+    }
+  };
+
   return (
     <header className="bg-white shadow-md fixed w-full z-50">
       <div className="container mx-auto px-4 py-4">
@@ -56,13 +65,13 @@ const Header = () => {
           </nav>
           <button onClick={toggleLanguage} className="ml-4 text-gray-600 hover:text-primary">
             <ReactCountryFlag
-              countryCode={language === 'pt' ? 'BR' : 'US'}
+              countryCode={getCountryCode(language)}
               svg
               style={{
                 width: '1.5em',
                 height: '1.5em',
               }}
-              title={language === 'pt' ? 'Português' : 'English'}
+              title={language.toUpperCase()}
             />
           </button>
         </div>
