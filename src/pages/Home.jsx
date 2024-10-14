@@ -52,7 +52,7 @@ const Home = () => {
         <h2 className="text-4xl font-semibold mb-10 text-secondary text-center">Agenda de Consultorias</h2>
         <div className="flex justify-center">
           <iframe 
-            src="https://calendar.google.com/calendar/embed?src=c_f606d145c55fb14f2007f8561e01acd58517c8d80849f16e8974dc0d3324dd15%40group.calendar.google.com&ctz=Europe%2FStockholm" 
+            src="https://calendar.google.com/calendar/embed?src=gabrielasilva%40kuresaude.com&ctz=Europe%2FStockholm" 
             style={{border: 0}} 
             width="800" 
             height="600" 
