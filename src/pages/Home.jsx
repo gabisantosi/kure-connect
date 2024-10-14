@@ -10,7 +10,7 @@ const Home = () => {
         <img 
           src="https://i.ibb.co/yX3yvb5/photo-02.jpg" 
           alt="Kure Saúde Hero" 
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-top"
         />
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
           <div className="text-center text-white">
