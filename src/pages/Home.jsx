@@ -21,8 +21,7 @@ const Home = () => {
               Oferecemos soluções de consultoria personalizadas em saúde digital, tecnologia e inovação para otimizar processos e melhorar a qualidade dos serviços.
             </p>
             <a
-              href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0Nh9Aw-Ck_Ow5Ld4Aw1Ht9Ck_Ow5Ld4Aw1Ht=?gv=true"
-              target="_blank"
+              href="#agende-consultoria"
               rel="noopener noreferrer"
             >
               <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold py-3 px-6 rounded-full text-lg transition-all duration-200 transform hover:scale-105">
@@ -53,7 +52,7 @@ const Home = () => {
       </div>
 
       {/* Agende uma Consultoria Section */}
-      <div className="bg-gradient-to-r from-primary/10 to-primary/30 py-20">
+      <div id="agende-consultoria" className="bg-gradient-to-r from-primary/10 to-primary/30 py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-semibold mb-6 text-center text-primary">Agende uma Consultoria Personalizada</h2>
           <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-xl p-8 mt-10">
@@ -80,9 +79,11 @@ const Home = () => {
             </p>
             <div className="text-center">
               <a
-                href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0Nh9Aw-Ck_Ow5Ld4Aw1Ht9Ck_Ow5Ld4Aw1Ht=?gv=true"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  alert('Sistema de agendamento em manutenção. Por favor, entre em contato conosco por telefone ou email para agendar sua consultoria.');
+                }}
               >
                 <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold py-4 px-8 rounded-full text-lg transition-all duration-200 transform hover:scale-105">
                   Agende sua Consultoria Gratuita
