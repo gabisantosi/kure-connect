@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, Globe } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import ReactCountryFlag from "react-country-flag";
 import { useLanguage } from "../contexts/LanguageContext";
 import { translations } from "../translations";
 
@@ -53,7 +54,15 @@ const Header = () => {
             </ul>
           </nav>
           <button onClick={toggleLanguage} className="ml-4 text-gray-600 hover:text-primary">
-            <Globe size={24} />
+            <ReactCountryFlag
+              countryCode={language === 'pt' ? 'BR' : 'US'}
+              svg
+              style={{
+                width: '1.5em',
+                height: '1.5em',
+              }}
+              title={language === 'pt' ? 'Português' : 'English'}
+            />
           </button>
         </div>
       </div>
