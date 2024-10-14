@@ -33,7 +33,6 @@ const Home = () => {
       </div>
 
       {/* Services Section */}
-      {/* Services Section */}
       <div className="container mx-auto px-4 py-20">
         <h2 className="text-4xl font-semibold mb-10 text-secondary text-center">Nossos Serviços de Consultoria</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -79,11 +78,9 @@ const Home = () => {
             </p>
             <div className="text-center">
               <a
-                href="#"
-                onClick={(e) => {
-                  e.preventDefault();
-                  alert('Sistema de agendamento em manutenção. Por favor, entre em contato conosco por telefone ou email para agendar sua consultoria.');
-                }}
+                href="https://calendar.app.google/tXX6YZGYhjn2oiej9"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold py-4 px-8 rounded-full text-lg transition-all duration-200 transform hover:scale-105">
                   Agende sua Consultoria Gratuita
