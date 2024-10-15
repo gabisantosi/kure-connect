@@ -36,7 +36,8 @@ const Home = () => {
               {t.heroDescription}
             </p>
             <a
-              href="#agende-consultoria"
+              href="https://calendar.app.google/tXX6YZGYhjn2oiej9"
+              target="_blank"
               rel="noopener noreferrer"
             >
               <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold py-3 px-6 rounded-full text-lg transition-all duration-200 transform hover:scale-105">
