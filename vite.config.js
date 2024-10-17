@@ -9,5 +9,5 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: '/kure-saude/', // Adicione esta linha com o nome do seu repositório
+  base: '/kure-connect/', // Adicione esta linha com o nome do seu repositório
 })
