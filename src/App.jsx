@@ -17,7 +17,7 @@ const App = () => (
   <LanguageProvider>
     <TooltipProvider>
       <Toaster />
-      <BrowserRouter>
+      <BrowserRouter basename="/kure-connect">
         <div className="flex flex-col min-h-screen">
           <Header />
           <main className="flex-grow">
