@@ -3,49 +3,73 @@ import { Button } from "@/components/ui/button";
 import { CalendarDays, Clock, Users } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../translations';
-import useEmblaCarousel from 'embla-carousel-react';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const Home = () => {
   const { language } = useLanguage();
   const t = translations[language];
-  const [emblaRef] = useEmblaCarousel({ loop: true, align: 'start' });
 
-  const clients = [
-    { name: "Organização Pan-Americana de Saúde", logo: "https://i.ibb.co/4jyDC9S/opas.jpg" },
-    { name: "Encare", logo: "https://i.ibb.co/vqQ706w/logo-encare.png" },
-    { name: "Laços Saúde", logo: "https://i.ibb.co/GMLgLpn/lacos-saude.png" },
-    { name: "Elfie Digital Health", logo: "https://i.ibb.co/PrKbnDZ/elfie.png" },
-    { name: "Ministério da Saúde", logo: "https://i.ibb.co/2sRYkNb/MINISTERIO-DA-SAUDE.jpg" },
+  const heroImages = [
+    {
+      src: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+      alt: "Digital health consultation"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1584982751601-97dcc096659c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+      alt: "Telemedicine session"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1581056771107-24ca5f033842?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+      alt: "Healthcare technology"
+    }
   ];
 
   return (
     <div>
-      {/* Hero Section */}
-      <div className="relative h-[70vh] overflow-hidden pt-16">
-        <img 
-          src="https://i.ibb.co/yX3yvb5/photo-02.jpg" 
-          alt="Kure Saúde Hero" 
-          className="w-full h-full object-cover object-[center_30%]"
-        />
-        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <div className="text-center text-white mt-32">
-            <h1 className="text-5xl font-bold mb-6 leading-tight">
-              {t.heroTitle}
-            </h1>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
-              {t.heroDescription}
-            </p>
-            <a
-              href="https://calendar.app.google/tXX6YZGYhjn2oiej9"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold py-3 px-6 rounded-full text-lg transition-all duration-200 transform hover:scale-105">
-                {t.scheduleConsultation}
-              </Button>
-            </a>
-          </div>
-        </div>
+      {/* Hero Section with Carousel */}
+      <div className="relative h-[70vh] overflow-hidden">
+        <Carousel className="w-full h-full">
+          <CarouselContent>
+            {heroImages.map((image, index) => (
+              <CarouselItem key={index} className="w-full h-full">
+                <div className="relative w-full h-full">
+                  <img 
+                    src={image.src} 
+                    alt={image.alt}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                    <div className="text-center text-white">
+                      <h1 className="text-5xl font-bold mb-6 leading-tight">
+                        {t.heroTitle}
+                      </h1>
+                      <p className="text-xl mb-8 max-w-2xl mx-auto">
+                        {t.heroDescription}
+                      </p>
+                      <a
+                        href="https://calendar.app.google/tXX6YZGYhjn2oiej9"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold py-3 px-6 rounded-full text-lg transition-all duration-200 transform hover:scale-105">
+                          {t.scheduleConsultation}
+                        </Button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="absolute left-4 top-1/2 transform -translate-y-1/2" />
+          <CarouselNext className="absolute right-4 top-1/2 transform -translate-y-1/2" />
+        </Carousel>
       </div>
 
       {/* Services Section */}
