@@ -17,15 +17,15 @@ const Home = () => {
 
   const heroImages = [
     {
-      src: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+      src: "/images/digital-health-1.jpg",
       alt: "Digital health consultation"
     },
     {
-      src: "https://images.unsplash.com/photo-1584982751601-97dcc096659c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+      src: "/images/digital-health-2.jpg",
       alt: "Telemedicine session"
     },
     {
-      src: "https://images.unsplash.com/photo-1581056771107-24ca5f033842?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+      src: "/images/digital-health-3.jpg",
       alt: "Healthcare technology"
     }
   ];
@@ -72,7 +72,6 @@ const Home = () => {
         </Carousel>
       </div>
 
-      {/* Services Section */}
       <div className="container mx-auto px-4 py-20">
         <h2 className="text-4xl font-semibold mb-10 text-secondary text-center">{t.servicesTitle}</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
